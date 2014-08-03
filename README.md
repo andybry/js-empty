@@ -8,7 +8,7 @@ other JavaScript projects.
 ## Initial Dependencies
 
 1. [nodejs][nodejs] and in particular npm.
-2. [Google Chrome][gchrome] 
+2. [Google Chrome][gchrome]. 
 
 It is recommended that [nvm][nvm] be used to manage node versions,
 although this is not neccessary.
@@ -22,31 +22,37 @@ and [IntelliJ][intellij] for integrated debugging via the
 
 ## Setup
 
-Get a copy of the project:
+1. Get a copy of the project:
 
-`git clone https://github.com/andybry/js-empty`
+        git clone https://github.com/andybry/js-empty
+        
+2. Rename the project to suite you. e.g:
 
-Rename the project to suite you.
+        mv js-empty my-project
 
-e.g. `mv js-empty my-project`
+3. Enter the project. e.g. 
 
-Enter the project: 
+        cd my-project
 
-e.g. `cd my-project`
+4. Make sure [karma][karma] is available on the system:
 
-Make sure [karma][karma] is available on the system:
+        npm install -g karma-cli
 
-`npm install -g karma-cli`
+5. Install node modules:
 
-Install node modules:
+        npm install
 
-`npm install`
 
-Then unit tests (in the spec folder) can be continually run (on change)
+## Usage
+
+After setup unit tests (in the spec folder) can be continually run (on change)
 against the JavaScript that you write (in the js) folder:
 
-`karam start`
+        karma start
 
+A modular approach to JavaScript is recommended with one module per file and
+one test suite (in its own file) for each module. The testing framework 
+is [Jasmine][jasmine].
 
 <!-- References -->
 [nodejs]: http://nodejs.org/
@@ -58,3 +64,4 @@ against the JavaScript that you write (in the js) folder:
 [intellij]: http://www.jetbrains.com/idea/
 [jbidesupport]: https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji
 [karma]: http://karma-runner.github.io/0.12/index.html
+[jasmine]: http://jasmine.github.io/
